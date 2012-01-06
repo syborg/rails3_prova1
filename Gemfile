@@ -40,7 +40,7 @@ group :test do
 end
 
 # MME: http://stackoverflow.com/questions/6282307/rails-3-1-execjs-and-could-not-find-a-javascript-runtime
-# gem 'therubyracer'
+#gem 'therubyracer'
 
 # MME http://support.cloudfoundry.com/entries/20757913-getting-a-rails-3-1-1-production-environment-working
 #gem 'thin'
