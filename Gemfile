@@ -39,8 +39,9 @@ group :test do
   gem 'turn', '0.8.2', :require => false
 end
 
-# MME: http://stackoverflow.com/questions/6282307/rails-3-1-execjs-and-could-not-find-a-javascript-runtime
-#gem 'therubyracer'
+# MME comentar per a deploy a cloudfoundry
+# (http://stackoverflow.com/questions/6282307/rails-3-1-execjs-and-could-not-find-a-javascript-runtime)
+gem 'therubyracer'
 
 # MME http://support.cloudfoundry.com/entries/20757913-getting-a-rails-3-1-1-production-environment-working
 #gem 'thin'

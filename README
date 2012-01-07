@@ -4,6 +4,18 @@ http://guides.rubyonrails.org/getting_started.html
 Iniciacio basica a RAILS 3.1.3 on es crea un Blog amb comentaris i tags per 
 cada entrada, amb el que s'assajen dades vinculades, formularis i subformularis.
 
+per a deployarlo a Cloudfoundry, s'han de seguir els següents passos (a dia 6/1/2012)
+- Fer que al Gemfile hi hagi "therubyracer" i "cloudfoundry-jquery-rails" (aquest
+  substituïnt al jquery-rails)
+- $ rake assets:clean		# assegurem que els assets es renovaran
+- $ rake assets:precompile	# renovem els assets
+- Esborrem (o comentem) "therubyracer" del Gemfile
+- $ bundle install		# instalem els gems necessaris
+- $ bundle package		# empaquetem els gems
+- $ vmc push --runtime ruby19 	# deploy i li diemn a CF que usi el ruby 1.9
+
+Per a deployarlo a cloudfoundry es necessari eliminar el gem therubyracer i
+pujarlo a cloudfoundry amb 'vmc push --runtime ruby19'.
 
 == Welcome to Rails
 

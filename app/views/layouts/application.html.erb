@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Prova1</title>
+  <title> <%= title %> </title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <!-- MME extret dels exemples de RyanBates. Els prototipus estan posats dins una capseta -->
 <body>
+    <div id="header">
+      <h1> <%= title %> </h1>
+    </div>
     <div id="container">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
